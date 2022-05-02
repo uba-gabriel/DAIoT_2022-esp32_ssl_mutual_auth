@@ -23,6 +23,9 @@
 #include "esp_log.h"
 #include "mqtt_client.h"
 
+// Set your local broker URI
+#define BROKER_URI "mqtts://192.168.68.54:8883"
+
 static const char *TAG = "MQTTS_EXAMPLE";
 
 extern const uint8_t client_cert_pem_start[] asm("_binary_client_crt_start");
@@ -106,7 +109,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
 static void mqtt_app_start(void)
 {
     const esp_mqtt_client_config_t mqtt_cfg = {
-        .uri = "mqtts://192.168.68.54:8883",
+        .uri = BROKER_URI,
         .client_cert_pem = (const char *)client_cert_pem_start,
         .client_key_pem = (const char *)client_key_pem_start,
         .cert_pem = (const char *)server_cert_pem_start,

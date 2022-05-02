@@ -14,6 +14,13 @@ necesarios
 
 
 
+# Configurar URI del Broker
+
+Dentro del archivo app_main.c hay que configurar la definición "BROKER_URI" que se encuentra
+al inicio del archivo, colocando los datos correctos del broker a utilizar.
+
+
+
 # Configurar certificados:
 
 En los archivos client.crt, client.key y broker_CA.crt, hay que pegar el contenido
