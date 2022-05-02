@@ -44,6 +44,7 @@ server.key
 ## El siguiente es el contenido del archivo mosquitto.conf que permite correr este ejemplo:
 
 persistence true
+
 persistence_location /var/lib/mosquitto/
 
 log_dest file /var/log/mosquitto/mosquitto.log
@@ -51,14 +52,21 @@ log_dest file /var/log/mosquitto/mosquitto.log
 include_dir /etc/mosquitto/conf.d
 
 #allow_anonymous true
+
 #password_file /etc/mosquitto/passfile
+
 #listener 1883
 
 listener 8883
+
 cafile /etc/mosquitto/certs/ca.crt
+
 keyfile /etc/mosquitto/certs/server.key
+
 certfile /etc/mosquitto/certs/server.crt
+
 require_certificate true
+
 use_identity_as_username true
 
 
