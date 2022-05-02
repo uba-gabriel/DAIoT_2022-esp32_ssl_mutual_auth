@@ -1,10 +1,11 @@
-# ESP-MQTT SSL Sample application (mutual authentication)
+# ESP-MQTT SSL Sample application 
+## (mutual authentication)
 
 Este ejemplo conecta el ESP32 al broker Mosquitto utilizando TLS
 
 
 
-# Configuracion SSID y PASS WiFi
+## Configuracion SSID y PASS WiFi
 
 Este ejemplo usa la funcion "example_connect()" de la platarforma ESP-IDF.
 
@@ -14,14 +15,14 @@ necesarios
 
 
 
-# Configurar URI del Broker
+## Configurar URI del Broker
 
 Dentro del archivo app_main.c hay que configurar la definición "BROKER_URI" que se encuentra
 al inicio del archivo, colocando los datos correctos del broker a utilizar.
 
 
 
-# Configurar certificados:
+## Configurar certificados:
 
 En los archivos client.crt, client.key y broker_CA.crt, hay que pegar el contenido
 de los certificados que se crean con el script crea_certs.sh.
@@ -29,7 +30,7 @@ Recordar reemplazar la IP que se encuentra dentro del script, por TU IP LOCAL
 
 
 
-# Copiar los certificados necesarios a la carpeta del broker:
+## Copiar los certificados necesarios a la carpeta del broker:
 
 En general la carpeta es "/etc/mosquitto/certs", el path se indica en el archivo mosquito.conf
 
@@ -40,7 +41,7 @@ server.key
 
 
 
-# El siguiente es el contenido del archivo mosquitto.conf que permite correr este ejemplo:
+## El siguiente es el contenido del archivo mosquitto.conf que permite correr este ejemplo:
 
 persistence true
 persistence_location /var/lib/mosquitto/
@@ -63,7 +64,7 @@ use_identity_as_username true
 
 
 
-## Ejemplo de la salida por consola al ejecutar la aplicación:
+### Ejemplo de la salida por consola al ejecutar la aplicación:
 
 ```
 I (3714) event: sta ip: 192.168.0.139, mask: 255.255.255.0, gw: 192.168.0.2
