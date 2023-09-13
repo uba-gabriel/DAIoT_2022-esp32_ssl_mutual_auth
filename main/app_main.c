@@ -24,7 +24,7 @@
 #include "mqtt_client.h"
 
 // Set your local broker URI
-#define BROKER_URI "mqtts://192.168.68.54:8883"
+#define BROKER_URI "mqtts://192.168.0.7:8883"
 
 static const char *TAG = "MQTTS_EXAMPLE";
 
